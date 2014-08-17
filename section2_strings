@@ -1,0 +1,2 @@
+text="My GitHub handle is @clarisemccants and my Twitter handle is @clariseamala"
+snail=text.find('@')
