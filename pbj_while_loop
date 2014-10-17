@@ -18,6 +18,11 @@ while bread_for_pbj>=1 and peanut_butter>=1 and jelly>=1:
 	print "Making sandwich #{0}...".format(sandwich_number)
 print "Peanut Butter Jelly Time is over! We only had enough for {0} sandwiches".format(sandwich)
 #Output:
+#Ready to make some peanut butter and jelly?? Tell me your ingredients.
+#How many slices of bread do you have? 
+#How many scoops of peanut butter do you have?
+#How many scoops of jelly do you have?
+#...if you have enough to make a sandwich...
 #It's Peanut Butter Jelly Time! Let's see how many sandwiches we can make 
 #Making sandwich #1...
 #Making sandwich #2...
@@ -30,11 +35,10 @@ slices=input ("How many slices of bread do you have? ")#use input instead of raw
 peanut_butter=input ("How many scoops of jelly do you have? ")
 jelly=input("How many scoops of jelly do you have? ")
 bread=slices/2
-ran_out=""
-
+ran_out=""#Use this variable to count which ingredients you ran out of.
 sandwich=min(bread, peanut_butter, jelly) #Use this variable to give the total number of sandwiches it's possible to make.
-lowest_ingredient=[bread, peanut_butter, jelly]
-sandwich_number=0 #Use this variable to give the sandwich number you are currently making
+
+
 if bread>=1 and peanut_butter>=1 and jelly>=1:
 	print "It's Peanut Butter Jelly time! Let's see how many sandwiches we can make."
 while bread>=1 and peanut_butter>=1 and jelly>=1:
@@ -51,3 +55,14 @@ if peanut_butter<1:
 if jelly<1:
 	ran_out=ran_out + " & jelly"
 print "Peanut Butter Jelly Time is over! We ran out of {0}. :(".format(ran_out)
+#Output:
+#Ready to make some peanut butter and jelly?? Tell me your ingredients.
+#How many slices of bread do you have? 
+#How many scoops of peanut butter do you have?
+#How many scoops of jelly do you have?
+#...if you have enough to make a sandwich...
+#It's Peanut Butter Jelly Time! Let's see how many sandwiches we can make 
+#Making sandwich #1, I have enough bread for X more sandwiches, enough peanut butter for X more, and enough jelly for X more sandwiches....
+#Making sandwich #2...
+#And so on until you're done.
+#Peanut Butter Jelly time is over! We ran out of X & Y & Z. :(
