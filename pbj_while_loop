@@ -8,10 +8,10 @@ bread=slices/2
 sandwich=min(bread_for_pbj, peanut_butter, jelly) #Use this variable to give the total number of sandwiches it's possible to make.
 
 sandwich_number=0 #Use this variable to give the sandwich number you are currently making
-if bread_for_pbj>=1 and peanut_butter>=1 and jelly>=1:
+if bread>=1 and peanut_butter>=1 and jelly>=1:
 	print "It's Peanut Butter Jelly time! Let's see how many sandwiches we can make."
-while bread_for_pbj>=1 and peanut_butter>=1 and jelly>=1:
-	bread_for_pbj= bread_for_pbj -1
+while bread>=1 and peanut_butter>=1 and jelly>=1:
+	bread= bread -1
 	peanut_butter=peanut_butter -1
 	jelly=jelly -1
 	sandwich_number= sandwich_number +1
