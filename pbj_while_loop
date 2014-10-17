@@ -1,0 +1,53 @@
+# Goal #1: Write a new version of the PB&J program that uses a while loop. Print "Making sandwich #" and the number of the sandwich until you are out of bread, peanut butter, or jelly.
+print "Ready to make some peanut butter and jelly?? Tell me your ingredients."
+bread=input("How many slices of bread do you have? ")#use input instead of raw_input because raw_input counts doesn't count the value as a number, only as a string (which means it won't be able to calculate the number of sandwiches you can make later on)
+peanut_butter=input("How many scoops of peanut butter do you have? ")
+jelly=input("How many scoops of jelly do you have? ")
+bread_for_pbj=bread/2
+
+sandwich=min(bread_for_pbj, peanut_butter, jelly) #Use this variable to give the total number of sandwiches it's possible to make.
+
+sandwich_number=0 #Use this variable to give the sandwich number you are currently making
+if bread_for_pbj>=1 and peanut_butter>=1 and jelly>=1:
+	print "It's Peanut Butter Jelly time! Let's see how many sandwiches we can make."
+while bread_for_pbj>=1 and peanut_butter>=1 and jelly>=1:
+	bread_for_pbj= bread_for_pbj -1
+	peanut_butter=peanut_butter -1
+	jelly=jelly -1
+	sandwich_number= sandwich_number +1
+	print "Making sandwich #{0}...".format(sandwich_number)
+print "Peanut Butter Jelly Time is over! We only had enough for {0} sandwiches".format(sandwich)
+#Output:
+#It's Peanut Butter Jelly Time! Let's see how many sandwiches we can make 
+#Making sandwich #1...
+#Making sandwich #2...
+#And so on until you're done.
+#Peanut Butter Jelly time is over :( We only had enough for X sandwiches.
+
+#Goal #2: Modify that program to say how many sandwiches-worth of each ingredient remains
+print "Ready to make some peanut butter and jelly?? Tell me your ingredients."
+slices=input ("How many slices of bread do you have? ")#use input instead of raw_input because raw_input counts doesn't count the value as a number, only as a string (which means it won't be able to calculate the number of sandwiches you can make later on)
+peanut_butter=input ("How many scoops of jelly do you have? ")
+jelly=input("How many scoops of jelly do you have? ")
+bread=slices/2
+ran_out=""
+
+sandwich=min(bread, peanut_butter, jelly) #Use this variable to give the total number of sandwiches it's possible to make.
+lowest_ingredient=[bread, peanut_butter, jelly]
+sandwich_number=0 #Use this variable to give the sandwich number you are currently making
+if bread>=1 and peanut_butter>=1 and jelly>=1:
+	print "It's Peanut Butter Jelly time! Let's see how many sandwiches we can make."
+while bread>=1 and peanut_butter>=1 and jelly>=1:
+	print "I have enough bread for {0} more sandwiches, enough peanut butter for {1} more, and enough jelly for {2} more sandwiches.".format(bread, peanut_butter, jelly)
+	bread= bread -1
+	peanut_butter=peanut_butter -1
+	jelly=jelly -1
+	sandwich_number= sandwich_number +1
+	print "Making sandwich #{0}...".format(sandwich_number)
+if bread<1: 
+	ran_out= ran_out + "bread"
+if peanut_butter<1:
+	ran_out=ran_out + " & peanut butter"
+if jelly<1:
+	ran_out=ran_out + " & jelly"
+print "Peanut Butter Jelly Time is over! We ran out of {0}. :(".format(ran_out)
