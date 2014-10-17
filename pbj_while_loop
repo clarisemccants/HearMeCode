@@ -1,9 +1,9 @@
 # Goal #1: Write a new version of the PB&J program that uses a while loop. Print "Making sandwich #" and the number of the sandwich until you are out of bread, peanut butter, or jelly.
 print "Ready to make some peanut butter and jelly?? Tell me your ingredients."
-bread=input("How many slices of bread do you have? ")#use input instead of raw_input because raw_input counts doesn't count the value as a number, only as a string (which means it won't be able to calculate the number of sandwiches you can make later on)
+slices=input("How many slices of bread do you have? ")#use input instead of raw_input because raw_input counts doesn't count the value as a number, only as a string (which means it won't be able to calculate the number of sandwiches you can make later on)
 peanut_butter=input("How many scoops of peanut butter do you have? ")
 jelly=input("How many scoops of jelly do you have? ")
-bread_for_pbj=bread/2
+bread=slices/2
 
 sandwich=min(bread_for_pbj, peanut_butter, jelly) #Use this variable to give the total number of sandwiches it's possible to make.
 
